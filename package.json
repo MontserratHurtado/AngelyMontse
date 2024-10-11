@@ -15,5 +15,8 @@
   "workspaces": [
     "src/montse_backend",
     "src/montse_frontend"
-  ]
+  ],
+  "dependencies": {
+    "@types/express": "^5.0.0"
+  }
 }
