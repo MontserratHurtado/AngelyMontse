@@ -1,0 +1,39 @@
+{
+  "canisters": {
+    "montse_backend": {
+      "build": "npx azle montse_backend",
+      "candid": "src/montse_backend/montse_backend.did",
+      "gzip": true,
+      "main": "src/montse_backend/src/index.ts",
+      "tech_stack": {
+        "cdk": {
+          "azle": {}
+        },
+        "language": {
+          "javascript": {},
+          "typescript": {}
+        }
+      },
+      "type": "custom",
+      "wasm": ".azle/montse_backend/montse_backend.wasm"
+    },
+    "montse_frontend": {
+      "dependencies": [
+        "montse_backend"
+      ],
+      "source": [
+        "src/montse_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "montse_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
